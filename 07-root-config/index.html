@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Root Config</title>
+
+      <!-- 여기가 바로 의존성 공유하는 곳 -->
+      <!-- 이것들이 network 탭에서 각각 다운로드 받게 될 것 -->
     <script type="systemjs-importmap">
       {
         "imports": {
@@ -15,6 +18,8 @@
         }
       }
     </script>
+      
+      <!-- 이거시 바로 system.js 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
   </head>
@@ -22,6 +27,9 @@
     <div id="single-spa-application:navbar"></div>
     <div id="single-spa-application:home"></div>
     <script>
+        // 다운로드하고 실행하는 코드
+        // 여러번 사용되면 다시 다운로드 되는게 아니라 재사용됨
+        // 이전에는 window.rooApp 이렇게 글로벌변수로 선언했는데 이제는 동적 로드함
       System.import("root-config");
     </script>
   </body>

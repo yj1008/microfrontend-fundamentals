@@ -9,6 +9,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: "history",
+  // root route / 부터 시작!
   base: "/",
   routes: [
     { path: "/vue", component: Home },

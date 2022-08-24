@@ -6,9 +6,11 @@ import Root from "./Root.vue";
 const app = singleSpaVue({
   Vue,
   appOptions: {
+    el: '#different-container',
     render(h) {
       return h(Root, {
         props: {
+          // vue는 render 함수에서 this 로 props 접근가능
           authToken: this.authToken,
         },
       });

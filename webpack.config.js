@@ -111,7 +111,10 @@ const directoryOptions = {
   },
   "07-root-config": {
     port: 8300,
+    // format 여기에 system 을 적음으로써 systemJS 를 사용할 수 있게됨
     format: "system",
+    // 여기에 정의된 애들은 각 앱에 다운로드되는것이 아니라 따로 다운로드 될 것
+    // Please don't include this in my app, because we need to share it
     externals: ["vue", "single-spa"],
   },
   "07-home": {

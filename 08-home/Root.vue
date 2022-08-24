@@ -10,6 +10,8 @@
   </BelowNav>
 </template>
 <script>
+// 이 BelowNav는 다른 micro-app 에서 왔다
+// -> cross micro-frontend import
 import { BelowNav } from "navbar";
 
 export default {

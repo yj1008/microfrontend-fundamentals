@@ -1,3 +1,4 @@
+<!-- 다른 형식으로 해도 되는데 html 형식이 읽기도 쉽고 좋음. 그냥 html로 해라 ㅇㅇ -->
 <single-spa-router>
   <nav>
     <ul>
@@ -11,13 +12,16 @@
   </nav>
   <route path="/profile">
     <h1>Profile</h1>
+    <!-- application 요소 : name 에 해당하는 micro-app 을 보여준다 -->
     <application name="settings"></application>
     <application name="subscription"></application>
   </route>
   <redirect from="/settings" to="/profile"></redirect>
+  <!-- exact : 완전 매칭일 경우 -->
   <route path="/" exact>
     <application name="home"></application>
   </route>
+  <!-- default : 매칭이 없을경우 -->
   <route default>
     <h1>404 Not Found</h1>
   </route>
